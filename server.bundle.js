@@ -97,24 +97,8 @@
 	  });
 	});
 
-	// app.get('*', (req, res) => {
-	//   // match the routes to the url
-	//   match({ routes: routes, location: req.url }, (err, redirect, props) => {
-	//     // `RouterContext` is the what `Router` renders. `Router` keeps these
-	//     // `props` in its state as it listens to `browserHistory`. But on the
-	//     // server our app is stateless, so we need to use `match` to
-	//     // get these props before rendering.
-	//     const appHtml = renderToString(<RouterContext {...props}/>)
-	//
-	//     // dump the HTML into a template, lots of ways to do this, but none are
-	//     // really influenced by React Router, so we're just using a little
-	//     // function, `renderPage`
-	//     res.send(renderPage(appHtml))
-	//   })
-	// })
-
 	function renderPage(appHtml) {
-	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>My First React Router App</title>\n    <link rel=stylesheet href=/index.css>\n    <div id=app>' + appHtml + '</div>\n    <script src="/bundle.js"></script>\n   ';
+	  return '\n    <!doctype html public="storage">\n    <html>\n    <meta charset=utf-8/>\n    <title>Dthree</title>\n    <link rel=stylesheet href=/index.css>\n    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">\n    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">\n    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>\n    <div id=app>' + appHtml + '</div>\n    <script src="/bundle.js"></script>\n   ';
 	}
 
 	var PORT = process.env.PORT || 8080;
